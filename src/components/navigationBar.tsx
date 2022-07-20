@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
-import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
-import { BiUserCircle } from 'react-icons/bi'
+import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
+import { BiCart, BiUserCircle } from 'react-icons/bi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-export type screenType =  "smallScreen" | "bigScreen"; 
+// smallScreen FIRST APPROCH
+
+export type screenType = "smallScreen" | "bigScreen";
 
 function SearchBar() {
   return (
@@ -23,15 +26,22 @@ export default function NavigationBar(): JSX.Element {
       setScreenType("smallScreen")
     }
   }
-  // initilize
   useEffect(setSize, []);
   if (screenType === "bigScreen") {
-    return <div className="w-full">BIG SCREEN</div>;
+    return <div className="flex flex-row w-screen gap-3">
+      <p className="basis-1 text-4xl">BABAG.com</p>
+      <div className="basis-9/12 flex flex-col w-full"><SearchBar /></div>
+      <div className="basis-1 text-4xl flex flex-row w-full gap-2  justify-end">
+        <BiCart />
+        <BiUserCircle />
+      </div>
+    </div>;
   } else {
     return (
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-screen">
         <div className="flex flex-row gap-2 w-full">
-          <h1 className="text-5xl">BABAG.com</h1>
+          <p className="text-4xl flex flex-row "><GiHamburgerMenu /></p>
+          <h1 className="text-4xl">BABAG.com</h1>
           <div className="text-4xl flex flex-row w-full gap-2  justify-end">
             <p><BiUserCircle /></p>
             <p><AiOutlineShoppingCart /></p>
