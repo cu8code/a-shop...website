@@ -20,9 +20,9 @@ function Popups(props: { keyid: string, values: string[], className: string }): 
 export default function NavigationBar() {
   return (
     <nav className="flex flex-row justify-around outline-1 outline">
-      <Popups keyid="Best Sheller" values={["some data", "some"]} className="" />
-      <Popups keyid="Customer Service" values={["some data", "some"]} className="" />
-      <Popups keyid="Mobile" values={["some data", "some"]} className="" />
+      <Popups keyid="Best Sheller" values={["some data", "some"]} className="hidden sm:block" />
+      <Popups keyid="Customer Service" values={["some data", "some"]} className="hidden sm:block" />
+      <Popups keyid="Mobile" values={["some data", "some"]} className="hidden sm:block" />
       <Popups keyid="Todays Deals" values={["some data", "some"]} className="hidden sm:block" />
       <Popups keyid="Electronic" values={["some data", "some"]} className="hidden md:block" />
       <Popups keyid="Fashion" values={["some data", "some"]} className="hidden md:block" />
