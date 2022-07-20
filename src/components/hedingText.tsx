@@ -1,3 +1,3 @@
-export default function HeadingText(props: {text:string}) {
-  return <h2 className="text-3xl font-bold underline outline-1 outline outline-gray-500">{props.text}</h2>;
+export default function HeadingText(props: { text: string }) {
+  return <h2 className="font-bold outline-1 outline outline-gray-500 text-xl sm:text-3xl">{props.text}</h2>;
 }
