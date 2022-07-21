@@ -11,7 +11,7 @@ export default function NavigationBar(props: {
   title: string;
 }): JSX.Element {
   return (
-    <nav className="text-3xl lg:text-4xl w-screen flex flex-col m-1">
+    <nav className="text-3xl lg:text-4xl w-screen flex flex-col p-1 md:p-2">
       <div className="w-full flex justify-between">
         <div className="flex flex-row justify-start">
           <GiHamburgerMenu />
@@ -22,7 +22,7 @@ export default function NavigationBar(props: {
         <div className="hidden md:block flex flex-row justify-center">
           <SearchBar />
         </div>
-        <div className="flex flex-row m-1 justify-end">
+        <div className="flex flex-row p-1 gap-2 justify-end">
           <AiOutlineShoppingCart />
           <BiUser />
         </div>
