@@ -4,14 +4,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import SearchBar from "./searchBar";
 
-// smallScreen default FIRST APPROCH
+// smallSCREEN default FIRST APPROCH
 
 export default function NavigationBar(props: {
   breakPoint: number;
   title: string;
 }): JSX.Element {
   return (
-    <nav className="text-3xl lg:text-4xl w-screen flex flex-col p-1 md:p-2">
+    <nav className="sticky top-0 bg-white text-3xl lg:text-4xl w-screen flex flex-col p-1 md:p-2 gap-2">
       <div className="w-full flex justify-between">
         <div className="flex flex-row justify-start">
           <GiHamburgerMenu />
@@ -31,6 +31,7 @@ export default function NavigationBar(props: {
       <div className="block md:hidden flex flex-row w-full">
         <SearchBar />
       </div>
+
     </nav>
   );
 }
