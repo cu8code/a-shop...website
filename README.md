@@ -1,3 +1,3 @@
-# Create T3 App
+# A shoping website demo
 
-An canvas based note taking app
+link [here](https://note-taking-in-next.vercel.app/)
