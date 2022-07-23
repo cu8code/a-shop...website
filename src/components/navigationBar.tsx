@@ -1,19 +1,27 @@
+import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import SearchBar from "./searchBar";
+import SideBar from "./sideBar";
 
 export default function NavigationBar(props: {
   breakPoint: number;
   title: string;
 }): JSX.Element {
+  const [sideBarVisible, setSideBarVisible] = useState(false);
   return (
     <nav className="sticky top-0 bg-white text-3xl lg:text-4xl flex flex-col p-1 md:p-2 gap-2">
       <div className="w-full flex justify-between">
-        <div className="flex flex-row justify-start">
+        <button
+          onClick={() =>
+            sideBarVisible ? setSideBarVisible(false) : setSideBarVisible(true)
+          }
+          className="flex flex-row justify-start"
+        >
           <GiHamburgerMenu />
-        </div>
+        </button>
         <div className="flex flex-row justify-center">
           <h1>{props.title}</h1>
         </div>
@@ -30,6 +38,7 @@ export default function NavigationBar(props: {
         <SearchBar />
       </div>
 
+      <SideBar isVisible={sideBarVisible} changeIsVisible={setSideBarVisible}/>
     </nav>
   );
 }
