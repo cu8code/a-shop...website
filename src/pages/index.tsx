@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import ItemContainer from "../components/itemContainer";
 import NavigationBar from "../components/navigationBar";
 
 const Home: NextPage = () => {
@@ -14,7 +13,6 @@ const Home: NextPage = () => {
       <NavigationBar breakPoint={700} title={"BOBONG.com"} />
       <main className="">
         <div className="flex flex-row gap-2 m-0 p-0">
-          <ItemContainer />
         </div>
       </main>
     </div >
