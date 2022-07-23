@@ -10,7 +10,7 @@ export default function SideBar({
     console.log(isVisible);
     
   return (
-    <div className={`transform ${!isVisible ? "-translate-x-full" : ""} absolute top-0 left-0 flex flex-col w-3/5 h-screen m-0 p-0 bg-slate-900`}>
+    <div className={`${!isVisible ? "hidden" : "visible"} absolute top-0 left-0 flex flex-col w-3/5 h-screen m-0 p-0 bg-slate-900`}>
       <button onClick={()=> isVisible ? changeIsVisible(false) : changeIsVisible(true)} className="text-pink-50">CLOSE</button>
     </div>
   );
