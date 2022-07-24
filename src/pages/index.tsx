@@ -12,10 +12,9 @@ const Home: NextPage = () => {
       </Head>
       <NavigationBar breakPoint={700} title={"BOBONG.com"} />
       <main className="">
-        <div className="flex flex-row gap-2 m-0 p-0">
-        </div>
+        <div className="flex flex-row gap-2 m-0 p-0"></div>
       </main>
-    </div >
+    </div>
   );
 };
 

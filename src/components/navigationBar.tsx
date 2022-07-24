@@ -38,7 +38,10 @@ export default function NavigationBar(props: {
         <SearchBar />
       </div>
 
-      <SideBar isVisible={sideBarVisible} changeIsVisible={setSideBarVisible}/>
+      <SideBar
+        isVisible={sideBarVisible}
+        setSideBarVisible={setSideBarVisible}
+      />
     </nav>
   );
 }
