@@ -7,7 +7,6 @@ import SearchBar from "./searchBar";
 import SideBar from "./sideBar";
 
 export default function NavigationBar(props: {
-  breakPoint: number;
   title: string;
 }): JSX.Element {
   const [sideBarVisible, setSideBarVisible] = useState(false);

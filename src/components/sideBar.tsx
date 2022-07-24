@@ -13,7 +13,7 @@ export default function SideBar({
     <div
       className={`${
         !isVisible ? "hidden" : "visible"
-      } absolute top-0 left-0 flex flex-col w-3/5 h-screen m-0 p-0 bg-slate-900`}
+      } absolute top-0 left-0 flex flex-col w-80 h-screen m-0 p-0 bg-slate-900`}
     >
       <button
         onClick={() =>
