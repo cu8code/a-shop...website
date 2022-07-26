@@ -12,7 +12,11 @@ const Home: NextPage = () => {
       </Head>
       <NavigationBar title={"BOBONG.com"} />
       <main>
-        <div className="flex flex-row gap-2 m-0 p-0"></div>
+        <div className=" origin-center -z-50 absolute top-1/3 left-1/3 blur-xl">
+          <div className="animate-blob absolute top-1 w-72 h-72 bg-[#a0fefb] rounded-full mix-blend-multiply"></div>
+          <div className="animate-blob absolute top-16 left-16 w-72 h-72 bg-rose-400 rounded-full mix-blend-multiply"></div>
+          <div className="animate-blob absolute top-1 left-24 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply"></div>
+        </div>
       </main>
     </div>
   );
